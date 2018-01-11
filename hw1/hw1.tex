@@ -1,0 +1,144 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm,latexsym,paralist}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{resources}{Resources}
+
+\newcommand{\name}[1]{\noindent\textbf{Name: Eric E. Gonzalez}}
+\newcommand{\honor}{\noindent On my honor, as an Aggie, I have neither
+  given nor received any unauthorized aid on any portion of the
+  academic work included in this assignment. Furthermore, I have
+  disclosed all resources (people, books, web sites, etc.) that have
+  been used to prepare this homework. \\[2ex]
+ \textbf{Signature:} \underline{\hspace*{7cm}} }
+
+ 
+\newcommand{\checklist}{\noindent\textbf{Checklist:}
+\begin{compactenum}
+\item Did you add your name? 
+\item Did you disclose all resources that you have used? \\
+(This includes all people, books, websites, etc.\ that you have consulted)
+\item Did you sign that you followed the Aggie honor code? 
+\item Did you solve all problems? 
+\item Did you submit (a) your latex source file and (b) the resulting pdf file
+  of your homework on CSNet?
+\item Did you submit (c) a signed hardcopy of the pdf file in class? 
+\end{compactenum}
+}
+
+\newcommand{\problemset}[1]{\begin{center}\textbf{Problem Set #1}\end{center}}
+\newcommand{\duedate}[2]{\begin{quote}\textbf{Due dates:} Electronic
+    submission of hw1.tex and hw1.pdf files of this homework is due on
+    \textbf{#1} on \texttt{https://csnet.cs.tamu.edu}.  A signed paper copy of the pdf file is due on
+    \textbf{#2} at the beginning of class.\end{quote} }
+
+
+\begin{document}
+\begin{center}
+{\large
+CSCE 222-501 Discrete Structures for Computing\\[.5ex]
+Fall 2014 -- Hyunyoung Lee\\}
+\end{center}
+\problemset{1}
+\duedate{9/15/2014 (Monday) before 11:59 p.m.}{9/16/2014 (Tuesday)}
+\name{ (type your name here) }
+\begin{resources} (Discrete Mathematics and its Applications 7th Edition by Rosen)
+\end{resources}
+\honor
+
+\bigskip
+
+\begin{problem} ($2 \mbox{ pts} \times 5 = 10$ points)
+Section 2.1, Exercise 8 b), c), d), e), and f), page 125
+\end{problem}
+\begin{solution} 
+b) No c) Yes d) Yes e) Yes f) No
+\end{solution}
+
+\begin{problem} ($2 \mbox{ pts} \times 5 = 10$ points)
+Section 2.1, Exercise 10 b), d), e), f), and g), page 125
+\end{problem}
+\begin{solution} 
+b) True d) True e) True f) True g) False
+\end{solution}
+
+\begin{problem} (10 points)
+Section 2.1, Exercise 26, page 126. Prove your answer. 
+\end{problem}
+\begin{solution} 
+The Cartesian Product of sets A and B is A$\times$B = $\{$(a,b) $\mid$ a $\in$ A $\wedge$ b $\in$ B$\}$. That of C and D is C$\times$D = $\{$(c,d) $\mid$ c $\in$ C $\wedge$ d $\in$ D$\}$. If A$\subseteq$C and B$\subseteq$D, then the product of A and B must must be less than or equal to that of the larger sets C and D, and also include only elements that are already present in the two supersets. Therefore, we can conclude that A$\times$B $\subseteq$ C$\times$D.
+\end{solution}
+
+\begin{problem} ($2.5 \mbox{ pts} \times 4 = 10$ points)
+Section 2.2, Exercise 2, page 136
+\end{problem}
+\begin{solution} 
+a) $A \cap B$
+\\b) $A - (A \cap B)$
+\\c) $A \cup B$
+\\d)$\overline{A} \cup \overline{B}$
+\end{solution}
+
+\begin{problem} ($3+3+4 = 10$ points)
+Section 2.2, Exercise 16 a), b), and d), page 136
+\end{problem}
+\begin{solution} 
+a) A$\subseteq$B = $\{$x$\mid$x $\in$ (A$\cap$B)$\}$ = $\{$x$\mid$x $\in$ A and B intersections$\}$ $\subseteq$ $\{$x$\mid$x $\in$ A$\}$
+\\Therefore, (A$\cap$B)$\subseteq$A.
+\\b) A$\cup$B forms a superset composed of all elements of A combined with all elements of B. As such, all of set A is included in A$\cup$B. Therefore, A $\subseteq$(A$\cup$B).
+\\d) Because B - A results in a set containing all elements of B not present in A, there are no common elements left between A and (B - A) that intersect. Therefore, A $\cap$ (B - A) = $\emptyset$
+\end{solution}
+
+\begin{problem} ($5 \mbox{ pts} \times 2 = 10$ points)
+Section 2.2, Exercise 50 b) and c), page 137
+\end{problem}
+\begin{solution} 
+b) $\cup_{i=1}^\infty A_i = \{0,1\}\cup \{0,2\}\cup \{0,3\}\cup...\cup\{0,n\} = \{0,1,2,3,...\}=Z^+$
+\\ $\cap_{i=1}^\infty A_i = \{0,1\}\cap \{0,2\}\cap \{0,3\}\cap... = \{0\}$
+\\c)  $\cup_{i=1}^\infty A_i = (0,1)\cup (0,2)\cup (0,3)\cup...\cup(0,n) = (0,\infty)=Z^+$
+\\$\cap_{i=1}^\infty A_i = (0,1)\cap (0,2)\cap (0,3)\cap (0,n)\cap... = (0,1)$
+\end{solution}
+
+\begin{problem} ($2.5 \mbox{ pts} \times 4 = 10$ points)
+Section 2.3, Exercise 12, page 153
+\end{problem}
+\begin{solution} 
+a) One-to-one
+\\b) Not one-to-one
+\\c) One-to-one
+\\d) Not one-to-one
+\end{solution}
+
+\begin{problem} (10 points)
+Section 2.3, Exercise 14, page 153
+\end{problem}
+\begin{solution} 
+a) Onto
+\\b) Not onto
+\\c) Onto
+\\d) Onto
+\\e) Not onto
+\end{solution}
+
+\begin{problem} (10 points)
+Section 2.3, Exercise 56, page 154
+\end{problem}
+\begin{solution} 
+n = ($\lfloor b \rfloor$ - $\lceil a \rceil$) + 1
+\end{solution}
+
+\begin{problem} ($2.5 \mbox{ pts} \times 4 = 10$ points)
+Section 2.3, Exercise 58, page 154
+\end{problem}
+\begin{solution} 
+a) 4 bits will require one byte
+\\b) 10 bits will require 2 bytes
+\\c) 500 bits will require 63 bytes
+\\d) 3000 bits will require 375 bytes
+\end{solution}
+
+\goodbreak
+\checklist
+\end{document}

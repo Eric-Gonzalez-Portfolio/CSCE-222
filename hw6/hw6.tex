@@ -1,0 +1,300 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm,latexsym,paralist}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{resources}{Resources}
+
+\newcommand{\name}[1]{\noindent\textbf{Name: #1}}
+\newcommand{\honor}{\noindent On my honor, as an Aggie, I have neither
+  given nor received any unauthorized aid on any portion of the
+  academic work included in this assignment. Furthermore, I have
+  disclosed all resources (people, books, web sites, etc.) that have
+  been used to prepare this homework. \\[1.5ex]
+ \textbf{Signature:} \underline{\hspace*{5cm}} }
+
+ 
+\newcommand{\checklist}{\noindent\textbf{Checklist:}
+\begin{compactitem}[$\Box$] 
+\item Did you add your name? 
+\item Did you disclose all resources that you have used? \\
+(This includes all people, books, websites, etc.\ that you have consulted)
+\item Did you sign that you followed the Aggie honor code? 
+\item Did you solve all problems? 
+\item Did you submit (a) your latex source file and (b) the resulting pdf file
+  of your homework on csnet?
+\item Did you submit (c) a signed hardcopy of the pdf file in class? 
+\end{compactitem}
+}
+
+\newcommand{\problemset}[1]{\begin{center}\textbf{Problem Set #1}\end{center}}
+\newcommand{\duedate}[2]{\begin{quote}\textbf{Due dates:} Electronic
+    submission of hw6.tex and hw6.pdf files of this homework is due on
+    \textbf{#1} on csnet.cs.tamu.edu.  Please do not archive or
+    compress the files.  A signed paper copy of the pdf file is due on
+    \textbf{#2} at the beginning of class.\end{quote}}
+    
+
+
+\begin{document}
+\vspace*{-15mm}
+\begin{center}
+{\large
+CSCE 222-501 Discrete Structures for Computing\\[.5ex]
+Fall 2014 -- Hyunyoung Lee\\}
+\end{center}
+\problemset{6}
+\duedate{10/27/2014 before 23:59}{10/28/2014} 
+\name{Eric E. Gonzalez}
+\begin{resources} Discrete Mathematics and its Applications 7th Ed.(Rosen)
+\end{resources}
+\honor
+
+\bigskip
+
+\begin{problem} 
+Section 5.3, Exercise 4, page 357
+\end{problem}
+\begin{solution} 
+$\break$
+$f(0)=f(1)=1$
+\\
+\\(a) $f(n+1)=f(n)-f(n-1)$
+\\$f(2)=f(1)-f(0)$
+\\$=1-1$
+\\$=0$
+\\$f(3)=f(2)-f(1)$
+\\$=0-1$
+\\$=-1$
+\\$f(4)=f(3)-f(2)$
+\\$=-1-0$
+\\$=-1$
+\\$f(5)=f(4)-f(3)$
+\\$=-1-(-1)$
+\\$=0$
+\\
+\\(b) $f(n+1)=f(n)f(n-1)$
+\\$f(2)=f(1)f(0)$
+\\$=1*1$
+\\$=1$
+\\$f(3)=f(2)f(1)$
+\\$=1*1$
+\\$=1$
+\\$f(4)=f(3)f(2)$
+\\$=1*1$
+\\$=1$
+\\$f(5)=f(4)f(3)$
+\\$=1*1$
+\\$=1$
+\\
+\\(c) $f(n+1)=f(n)^2 + f(n-1)^3$
+\\$f(2)=f(1)^2 + f(0)^3$
+\\$=1^2 + 1^3$
+\\$=1 + 1$
+\\$=2$
+\\$f(3)=f(2)^2 + f(1)^3$
+\\$=2^2 + 1^3$
+\\$=4 + 1$
+\\$=5$
+\\$f(4)=f(3)^2 + f(2)^3$
+\\$=5^2 + 2^3$
+\\$=25 + 8$
+\\$=33$
+\\$f(5)=f(4)^2 + f(3)^3$
+\\$=33^2 + 5^3$
+\\$=1089 + 125$
+\\$=1214$
+\\
+\\(d)
+\\$f(n+1)=f(n)/f(n-1)$
+\\$f(2)=f(1)/f(0)$
+\\$= 1/1 = 1$
+\\$f(3)=f(2)/f(1)$
+\\$= 1/1 = 1$
+\\$f(4)=f(3)/f(2)$
+\\$= 1/1 = 1$
+\\$f(5)=f(4)/f(3)$
+\\$= 1/1 = 1$
+\end{solution}
+
+\begin{problem} 
+Section 5.3, Exercise 6, page 357
+\end{problem}
+\begin{solution} 
+$\break$
+(a) The function is well-defined
+\\ $f(n)=-f(n-1)$ for $ n \ge 1$.
+\\Basis step: $f(0) = 1 = (-1)^0$
+\\Induction step: $f(n)=-f(n-1)$
+\\$=-(-1)^{n-1}$
+\\$=(-1)^n$
+\\Therefore, claim proven by induction.
+\\(b) The function is well-defined
+\\$2^m$ if $n=3k$,
+\\$0$ if $n=3k+1$, 
+\\and $2^{m+1} $ if $n=3k+2$
+\\for some integer $k$.
+\\Basis step:
+\\$f(0)=1=2^0$
+\\$f(1)=0$
+\\$f(2)=2=2^{0+1}$
+\\Induction step: $f(n)=2f(n-3)$ for $n\ge3$
+\\Therefore, $f(n)$ = $2^k$, or, = $0$, or, = $2^{k+1}$
+\\The claim is proven by strong induction.
+\\c) Function is invalid because no base case can be reached.
+\\d) Function is not well-defined because $f(1)$ and $2f(1-1)$ equal different values.
+\\e) The function is defined by $f(n)=2^{\lfloor n/2\rfloor+1}$
+\\Basis Step:
+\\$f(0)=2=2^1=2^{\lfloor0/2\rfloor+1}$
+\\$f(1)=f(0)=2=2^1=2^{\lfloor1/2\rfloor+1}$
+\\Induction Step:
+\\$f(n)=2f(n-2)$
+\\$=2*2^{\lfloor(n-2)/2\rfloor+1}$
+\\$=2*2^{\lfloor n/2 \rfloor}= 2^{\lfloor n/2 \rfloor + 1}$
+\\Thus, the claim is proven by induction.
+\end{solution}
+
+\begin{problem} 
+Section 5.3, Exercise 8, page 358
+\end{problem}
+\begin{solution} 
+$\break$
+a)  $a_1=2$ and $a_n=4 + a_{n-1}$ for $n \ge 2$.
+\\b)  $a_1=0$, $a_2=2$, and $a_n= a_{n-2}$ for $n \ge 3$.
+\\c)  $a_1=2$ and $a_n=a_{n-1} + 2n$ for $n \ge 2$.
+\\d)  $a_1=1$ and $a_n= a_{n-1}+2n-1$ for $n \ge 2$.
+\end{solution}
+
+\begin{problem} 
+Section 5.3, Exercise 12, page 358
+\end{problem}
+\begin{solution} 
+$\break$
+Basis Step: $P(1)=f_1^2=f_1f_1=1*1=1$
+\\Induction Step: 
+\\$P(k+1)=f_1^2+f_2^2+...+f_k^2+f_{k+1}^2=f_kf_k+1+f_{k+1}^2$
+\\$=f_kf_{k+1}+f_{k+1}f_{k+1}$
+\\$=f_{k+1}[f_k+f_{k+1}]$
+\\$=f_{k+1}f_{k+2}$
+\\Therefore, true by induction.
+\end{solution}
+
+\begin{problem} 
+Section 5.3, Exercise 14, page 358
+\end{problem}
+\begin{solution} 
+$\break$
+Basis Step: $P(1)=f_{1+1}f_{1-1}-f_1^2=f_2f_0-f_1f_1=1*0-1*1=(-1)^1$
+\\Induction Step:
+\\$P(k+1)=f_{(k+1)+1}f_{(k+1)-1}-f_{k+1}^2$
+\\$=f_{k+2}f_k-f_{k+1}^2$
+\\$=f_{k+2}f_k-f_{k+1}f_{k+1}$
+\\$=(f_{k+1}+f_k)f_k-f_{k+1}f{k+1}$
+\\$=f_{k+1}f_k+f_k^2-f_{k+1}[f_k+f_{k-1}]$
+\\$=f_{k+1}f_k+f_k^2-f_{k+1}f_k-f_{k+1}f_{k-1}$
+\\$f_k^2-f_{k+1}f_{k-1}$
+\\$=-(-1)^k$
+\\$=-1(-1)^k$
+\\$=(-1)^{k+1}$
+\\Therefore, proven by induction.
+
+\end{solution}
+
+\begin{problem} 
+Section 5.3, Exercise 16, page 358
+\end{problem}
+\begin{solution} 
+$\break$
+Basis Step: $f_0-f_1+f_2=0-1+1=1-1=f_1-1$
+\\Induction Step:  
+\\$\Sigma^{2n+2}_{k=0}(-1)^kf_k$
+\\=$f_{2n-1} -1 - f_{2n+1}+f_{2n+2}$
+\\=$f_{2n-1}+f_{2n}-1$
+\\=$f_{2n+1}-1$
+\\=$f_{2(n+1)-1}-1$
+\\Therefore, claim proven by induction.
+\end{solution}
+
+\begin{problem} 
+Section 5.3, Exercise 20, page 358 
+\end{problem}
+\begin{solution} 
+$\break$
+max:
+\\$max(a_i,a_{i+1})=a_i if a_i \ge a_{i+1} for i=0,1,2,...,n-1$
+\\$max(a_1,a_2,...,a_n)=max(max(a_1,a_2,...,a_{n-1}),a_n)$
+\\
+\\min:
+\\$min(a_i,a_{i+1})=a_i if a_i \le a_{i+1} for i=0,1,2,...,n-1$
+\\$min(a_1,a_2,...,a_n)=min(min(a_1,a_2,...,a_{n-1}),a_n)$
+\end{solution}
+
+\begin{problem} 
+Section 5.3, Exercise 26, page 358
+\end{problem}
+\begin{solution} 
+$\break$
+(a)
+\\1st Application: $(2,3),(3,2)$
+\\2nd Application: $(4,6),(5,5),(6,4)$
+\\3rd Application: $(6,9),(7,8),(8,7),(9,6)$
+\\4th Application: $(8,12),(9,11),(10,10),(11,9),(12,8)$
+\\5th Application: $(10,15),(11,14),(12,13),(13,12),(14,11),(15,11)$
+\\
+\\(b)
+\\Basis Step:
+\\$5|a+b$ with $(0,0)$
+\\$5|0+0$, so basis holds
+\\Inductive Hypothesis: Assume 5|a+b
+\\Recursive Step: 
+\\True by strong induction. Cause I ran out of time.
+\\
+\\(c)
+\\Basis Step:
+\\$5|a+b$ when a=0 and b=0
+\\$5|0$, so basis holds
+\\Inductive Hypothesis: Assume $5|a+b$ for $(a,b) \in S$
+\\Recursive Step:
+\\Show that (a+2, b+3) and (a+3, b+2) are divisible by 5
+\\5|a+b is true by I.H.
+\\5|a+2+b+3 = 5|a+b+5
+\\5|5
+\\Thus, we can prove the claim by structural induction.
+\end{solution}
+
+\begin{problem} 
+Section 5.3, Exercise 36, page 359
+\end{problem}
+\begin{solution} 
+$\break$
+Let $w_1$ = ab
+\\Let $w_2$ = cd
+\\$w_1w_2$ = abcd
+\\$(w_1w_2)^R$ = dcba
+\\
+\\Recursive Step:
+\\$w_1^R$ = ba
+\\$w_2^R$ = dc
+\\$w_2^Rw_1^R$ = dcba
+\\= $(w_1w_2)^R$
+\end{solution}
+
+\begin{problem} 
+Section 5.3, Exercise 44, page 359 
+\end{problem}
+\begin{solution} 
+$\break$
+Let T be a binary tree with a single root node.
+\\$l(T)=1, i(T)=0$
+\\$l(T) = l(T_1) + l(T_2)$
+\\$= (i(T_1) + 1) + (i(T_2) + 1)$
+\\As such, for any binary tree T, $l(T) = i(T) + 1$
+\\The claim is proven by structural induction.
+\end{solution}
+
+\bigskip
+
+\goodbreak
+\checklist
+\end{document}

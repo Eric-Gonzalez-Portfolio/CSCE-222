@@ -1,0 +1,175 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm,latexsym,paralist}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{resources}{Resources}
+
+\newcommand{\name}[1]{\noindent\textbf{Name: #1}}
+\newcommand{\honor}{\noindent On my honor, as an Aggie, I have neither
+  given nor received any unauthorized aid on any portion of the
+  academic work included in this assignment. Furthermore, I have
+  disclosed all resources (people, books, web sites, etc.) that have
+  been used to prepare this homework. \\[2ex]
+ \textbf{Signature:} \underline{\hspace*{5cm}} }
+
+ 
+\newcommand{\checklist}{\noindent\textbf{Checklist:}
+\begin{compactitem}[$\Box$] 
+\item Did you add your name? 
+\item Did you disclose all resources that you have used? \\
+(This includes all people, books, websites, etc. that you have consulted)
+\item Did you sign that you followed the Aggie honor code? 
+\item Did you solve all problems? 
+\item Did you submit (a) your latex source file and (b) the resulting pdf file
+  of your homework on csnet?
+\item Did you submit (c) a signed hardcopy of the pdf file in class? 
+\end{compactitem}
+}
+
+\newcommand{\problemset}[1]{\begin{center}\textbf{Problem Set #1}\end{center}}
+\newcommand{\duedate}[2]{\begin{quote}\textbf{Due dates:} Electronic
+    submission of hw3.tex and hw3.pdf files of this homework is due on
+    \textbf{#1} on csnet.cs.tamu.edu.  Please do not archive or
+    compress the files.  A signed paper copy of the pdf file is due on
+    \textbf{#2} at the beginning of class.
+    \textbf{If you do not turn in a signed hardcopy, your work will not be graded.}\end{quote} }
+
+\newcommand{\N}{\mathbf{N}}
+\newcommand{\R}{\mathbf{R}}
+\newcommand{\Z}{\mathbf{Z}}
+
+
+\begin{document}
+\vspace*{-15mm}
+\begin{center}
+{\large
+CSCE 222-501 Discrete Structures for Computing\\[.5ex]
+Fall 2014 -- Hyunyoung Lee\\}
+\end{center}
+\problemset{3}
+\duedate{9/29/2014 before 23:59}{9/30/2014}
+\name{Eric E. Gonzalez}
+\begin{resources} (Discrete Mathematics and its Applications 7th Edition by Rosen)
+\end{resources}
+\honor
+
+\bigskip
+
+\begin{problem} (10 points) Section 3.3, Exercise 4 on page 229
+\end{problem}
+\begin{solution}
+The loop iterates until i = $2^k$ and i $\ge$ n. As such, k = $log_2$n and the number of operations is $O(log_2 n)$
+\end{solution}
+
+\begin{problem} (15 points) Section 3.3, Exercise 14 on pages 230
+\end{problem}
+\begin{solution}
+$\break$
+(a) y = $a_2$ = 3
+\\
+\\i=1
+\\y = 3*2+1=7
+\\
+\\i=2
+\\y = 7*2+1=15
+\\
+\\(b) The while loop contains one addition and one multiplication looping 1 to n times. Therefore, there are n additions and n multiplications.
+\end{solution}
+
+\begin{problem} (15 points) Section 3.3, Exercise 16 on page 230
+\end{problem}
+\begin{solution}
+$\break$
+(a) $2^{(8.64*10^{15})}$
+\\(b) 8.64*$10^{12}$ OR 8640000000000
+\\(c) 92951600
+\\(d) 2939387
+\\(e) 205197
+\\(f) $log_2$(8.64*$10^{15}$)
+\\(g) $\frac{1}{2}$ * $log_2$(8.64*$10^{15}$)
+\\(h)$log_2$($log_2$(8.64*$10^{15}$))
+\end{solution}
+
+\begin{problem} (10 points) Section 1.1, Exercise 6 on page 13
+\end{problem}
+\begin{solution}
+$\break$
+(a) True
+\\(b) True
+\\(c) False
+\\(d) False
+\\(e) False
+\end{solution}
+
+\begin{problem} (10 points) Section 1.1, Exercise 10 on page 13
+\end{problem}
+\begin{solution}
+$\break$
+(a) The election is not decided.
+\\(b) The election is decided or the votes have been counted.
+\\(c) The election is not decided and the votes have been counted.
+\\(d) If the votes have been counted, then the election is decided.
+\\(e) If the votes have not been counted, then the election is not decided.
+\\(f) If the election is not decided, then the votes have not been counted.
+\\(g) The election is decided if and only if the votes have been counted.
+\\(h) The votes have not been counted, or the election is not decided and the votes have been counted.
+\end{solution}
+
+\begin{problem} (10 points) Section 1.1, Exercise 14 on pages 13--14
+\end{problem}
+\begin{solution}
+$\break$
+(a) r$\land$$\lnot$q
+\\(b) p$\land$q$\land$r
+\\(c) r$\rightarrow$p
+\\(d)(p$\land$$\lnot$q)$\land$r
+\\(e)(p$\land$q)$\rightarrow$r
+\\(f) r$\leftrightarrow$(q$\lor$p)
+\end{solution}
+
+\begin{problem} (10 points) Section 1.1, Exercise 32 e) and f) on page 15
+\end{problem}
+\begin{solution}
+\end{solution}
+$\break$
+\begin{displaymath}
+\begin{array}{|c c|c|c|c|c|}
+p & q & \lnot p & q \rightarrow \lnot p & p \leftrightarrow q & (q \rightarrow \lnot p) \leftrightarrow (p \leftrightarrow q)\\
+\hline
+T & T & F & F & T & F\\
+T & F & F & T & F & F\\
+F & T & T & T & F & F\\
+F & F & T & T & T & T\\
+\end{array}
+\end{displaymath}
+\\
+\begin{displaymath}
+\begin{array}{|c c|c|c|c|c|}
+p & q & \lnot q & p \leftrightarrow q & p \leftrightarrow \lnot q & (p \leftrightarrow q) \oplus (p \leftrightarrow \lnot q)\\
+\hline
+T & T & F & T & F & T\\
+T & F & T & F & T & T\\
+F & T & F & F & T & T\\
+F & F & T & T & F & T\\
+\end{array}
+\end{displaymath}
+\begin{problem} (10 points) Section 1.2, Exercise 20 on page 23
+\end{problem}
+\begin{solution}
+$\break$
+A cannot be telling the truth, because then B's statement that he is a knave is made logically impossible by means of paradox. Therefore, A is the knave and B is the knight.
+\end{solution}
+
+\begin{problem} (10 points) Section 1.2, Exercise 28 on page 23
+\end{problem}
+\begin{solution}
+$\break$
+Each person's status as a knight, knave, or spy is dependent upon that of the person before them. As such, a chain occurs in which A must be lying in order for everyone to be a knight, knave and spy. So: A (the knave) is lying; B (the spy) is lying about A's status; and C (the knight) is telling the truth about B's status.
+\end{solution}
+
+
+\goodbreak
+\checklist
+\end{document}

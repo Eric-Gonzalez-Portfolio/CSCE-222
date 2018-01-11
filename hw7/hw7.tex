@@ -1,0 +1,200 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm,latexsym,paralist,soul}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{resources}{Resources}
+
+\newcommand{\name}[1]{\noindent\textbf{Name: #1}}
+\newcommand{\honor}{\noindent On my honor, as an Aggie, I have neither
+  given nor received any unauthorized aid on any portion of the
+  academic work included in this assignment. Furthermore, I have
+  disclosed all resources (people, books, web sites, etc.) that have
+  been used to prepare this homework. \\[2ex]
+ \textbf{Signature:} \underline{\hspace*{7cm}} }
+
+ 
+\newcommand{\checklist}{\noindent\textbf{Checklist:}
+\begin{compactitem}[$\Box$] 
+\item Did you add your name? 
+\item Did you disclose all resources that you have used? \\
+(This includes all people, books, websites, etc. that you have consulted)
+\item Did you sign that you followed the Aggie honor code? 
+\item Did you solve all problems? 
+\item Did you submit (a) your latex source file and (b) the resulting pdf file
+  of your homework on csnet?
+\item Did you submit (c) a signed hardcopy of the pdf file in class? 
+\end{compactitem}
+}
+
+\newcommand{\problemset}[1]{\begin{center}\textbf{Problem Set #1}\end{center}}
+\newcommand{\duedate}[2]{\begin{quote}\textbf{Due dates:} Electronic
+    submission of hw7.tex and hw7.pdf files of this homework is due on
+    \textbf{#1} on csnet.cs.tamu.edu.  Please do not archive or
+    compress the files.  A signed paper copy of the pdf file is due on
+    \textbf{#2} at the beginning of class.\end{quote} }
+
+
+\begin{document}
+\vspace*{-15mm}
+\begin{center}
+{\large
+\textbf{***Three problems are discarded and three new problems are added in boldface.***}\\[1ex]
+CSCE 222-501 Discrete Structures for Computing\\[.5ex]
+Fall 2014 -- Hyunyoung Lee\\}
+\end{center}
+\problemset{7}
+\duedate{11/3/2014 before 23:59}{11/4/2014}
+
+\name{Eric E. Gonzalez}
+\begin{resources} Discrete Mathematics and its Applications 7th Ed.(Rosen)
+\end{resources}
+\honor
+
+\bigskip
+\begin{problem}
+\textbf{Section 6.1, Exercise 14, page 396}
+\end{problem}
+\begin{solution} 
+$\break$
+The number of strings with length $n = 2^n$, providing $2^n$ numbers of choices. 
+\\The number of bit strings with 1 at the beginning and end = $n - 2$ choices.
+\\The number of strings with 1s at the beginning and end is $2^{n-2}$.
+\end{solution}
+
+\begin{problem}
+\textbf{Section 6.1 Exercise 16, page 396}
+\end{problem}
+\begin{solution} 
+$\break$
+Let $S$ = the number of possible strings with x
+\\Let $T$ = the number of possible strings without x
+\\$S = 26^4 = 456976$
+\\$T = 25^4 = 390625$
+\\$S - T = 456976 - 390625$
+\\$= 66351$
+\end{solution}
+
+\begin{problem}
+Section 6.1, Exercise 32, page 397
+\end{problem}
+\begin{solution}
+$\break$ 
+(a) $26^8$
+\\(b) $26*25*24*23*22*21*20*19$
+\\(c) $25^7$
+\\(d) $25*24*23*22*21*20*19$
+\\(e) $25^6$
+\\(f) $25^6$
+\\(g) $25^4$
+\\(h) $2(26^6) - 26^4$
+\end{solution}
+
+\begin{problem} 
+Section 6.1, Exercise 70, page 398
+\end{problem}
+\begin{solution} 
+$\break$
+$n = 2^n$ by the Product Rule
+\\So, $2^n = 2^{2^n}$
+\\Thus, there are $2^{2^n}$ different truth tables for $n$ variables.
+\end{solution}
+
+\begin{problem} 
+Section 6.2, Exercise 8, page 405
+\end{problem}
+\begin{solution}
+$\break$
+$f: S \rightarrow T$ and $|S| \ge |T|$
+\\$|T| = n$ and $|S| \ge n+1$
+\\As such, n+1 elements are set to map to n elements.
+\\So, by pigeon-hole principle, at least one pair of elements maps to the same spot, making $f(s_1) = f(s_2)$.
+\\Therefore, the function $f$ is not one-to-one.
+\end{solution}
+
+\begin{problem}
+Section 6.2, Exercise 16, page 405
+\end{problem}
+\begin{solution} 
+$\break$
+If we arrange the set into pairs that add to 16, then we get (1,15),(3,13),(5,11),(7,9).
+\\Since there are 4 pairs of numbers that add to 16, we need to choose at least 5 to ensure that two numbers will be a matching pair and add up to 16.
+\end{solution}
+
+\begin{problem} 
+Section 6.2, Exercise 46, page 407
+\end{problem}
+\begin{solution} 
+$\break$
+Assume each box contains at most $n_i - 1$ objects.
+\\If $n$ is the maximum number of objects that can be placed into a $t$ number of boxes, then:
+\\$n = n_1 - 1 ...+ n_t - 1$
+\\$= n_1 ... + ...n_t - t$
+\\$< n_t - t +1$
+\\It is not possible to place all $n_t - t +1 $ into the $t$ boxes. As such, for some $i$, the $i$th box must contain at least $n_i$ objects.
+\end{solution}
+
+\begin{problem}
+Section 6.3, Exercise 12, page 413
+\end{problem}
+\begin{solution} 
+$\break$
+(a) $12 \choose 3$ = 220
+\\(b) $12 \choose 0$ + $12 \choose 1$ + $12 \choose 2$ + $12 \choose 3$ = 299
+\\(c) $12 \choose 3$ + $12 \choose 4$ + $12 \choose 5$ + $12 \choose 6$ + $12 \choose 7$ + $12 \choose 8$ + $12 \choose 9$ + $12 \choose 10$ + $12 \choose 11$ + $12 \choose 12$ = 4017
+\\(d) $12 \choose 6$ = 924
+\end{solution}
+
+\begin{problem}
+\textbf{Section 6.3 Exercise 18 on page 413}
+\end{problem}
+\begin{solution} 
+$\break$
+(a) $2^8 = 256$
+\\(b) $8 \choose 3$ = $56$
+\\(c) $8 \choose 5$ + $8 \choose 4$ + $8 \choose 3$ + $8 \choose 2$ + $8 \choose 1$ + $8 \choose 0$ = 219
+\\(d) $8 \choose 4$ = $70$
+\end{solution}
+
+\begin{problem} 
+Section 6.3, Exercise 22, page 414
+\end{problem}
+\begin{solution} 
+$\break$
+(a) $7! = 5040$
+\\(b) $6! = 720$
+\\(c) $5! = 120$
+\\(d) $5! = 120$
+\\(e) $4! = 24$
+\\(f) 0, as there are no permutations available. B can't be followed by both A and F simultaneously.
+\end{solution}
+
+\ \\
+\noindent
+%\begin{problem} 
+\st{Section 6.4, Exercise 14, page 421}
+%\end{problem}
+%\begin{solution} 
+%\end{solution}
+
+\ \\
+\noindent
+%\begin{problem} 
+\st{Section 6.4, Exercise 16, page 421}
+%\end{problem}
+%\begin{solution} 
+%\end{solution}
+
+\ \\
+\noindent
+%\begin{problem} 
+\st{Section 6.4, Exercise 38, page 422 (read the hint carefully!)}
+%\end{problem}
+%\begin{solution} 
+%\end{solution}
+\ \\
+
+\goodbreak
+\checklist
+\end{document}

@@ -1,0 +1,226 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm,latexsym,paralist}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{resources}{Resources}
+
+\newcommand{\name}[1]{\noindent\textbf{Name: #1}}
+\newcommand{\honor}{\noindent On my honor, as an Aggie, I have neither
+  given nor received any unauthorized aid on any portion of the
+  academic work included in this assignment. Furthermore, I have
+  disclosed all resources (people, books, web sites, etc.) that have
+  been used to prepare this homework. \\[1.5ex]
+ \textbf{Signature:} \underline{\hspace*{7cm}} }
+
+ 
+\newcommand{\checklist}{\noindent\textbf{Checklist:}
+\begin{compactitem}[$\Box$] 
+\item Did you add your name? 
+\item Did you disclose all resources that you have used? \\
+(This includes all people, books, websites, etc.\ that you have consulted)
+\item Did you sign that you followed the Aggie honor code? 
+\item Did you solve all problems? 
+\item Did you submit (a) your latex source file and (b) the resulting pdf file
+  of your homework on csnet?
+\item Did you submit (c) a signed hardcopy of the pdf file in class? 
+\end{compactitem}
+}
+
+\newcommand{\problemset}[1]{\begin{center}\textbf{Problem Set #1}\end{center}}
+\newcommand{\duedate}[2]{\begin{quote}\textbf{Due dates:} Electronic
+    submission of hw5.tex and hw5.pdf files of this homework is due on
+    \textbf{#1} on csnet.cs.tamu.edu.  Please do not archive or
+    compress the files.  A signed paper copy of the pdf file is due on
+    \textbf{#2} at the beginning of class.\end{quote}}
+    
+
+
+\begin{document}
+\vspace*{-15mm}
+\begin{center}
+{\large
+CSCE 222-501 Discrete Structures for Computing\\[.5ex]
+Fall 2014 -- Hyunyoung Lee\\}
+\end{center}
+\problemset{5}
+\duedate{10/20/2014 before 23:59}{10/21/2014} 
+\name{Eric E. Gonzalez}
+\begin{resources} (Discrete Mathematics and its Applications 7th Edition by Rosen)
+\end{resources}
+\honor
+
+\bigskip
+
+\begin{problem}
+Section 2.4, Exercise 6 (b), (c), (d), (g) and (h), pages 167--168
+\end{problem}
+\begin{solution} 
+$\break$
+(b) 1, 3, 6, 10, 15, 21, 28, 36, 45, 55 
+\\(c) 1, 5, 19, 65, 211, 665, 2059, 6305, 19171, 58025 
+\\(d) 1, 1, 1, 2, 2, 2, 2, 2, 3, 3 
+\\(g) 1, 2, 2, 4, 8, 11, 33, 37, 148, 153
+\\(h) 1, 2, 2, 2, 2, 3, 3, 3, 3, 3
+
+\end{solution}
+
+\begin{problem}
+Section 2.4, Exercise 16 (c), (d), (e), (f) and (g), page 168
+\end{problem}
+\begin{solution} 
+$\break$
+(c) $a_n$ = $4 - \frac{n(n+1)}{2}$
+\\(d) $a_n$ = $-2^{n+2}$ + 3
+\\(e) $a_n$ = $2(n+1)!$
+\\(f) $a_n$ = $3*2^{n}n!$
+\\(g) $a_n$ = $\frac{2n-1+(-1)^{n-1}}{4} + 7(-1)^n$
+\end{solution}
+
+\begin{problem} 
+Section 5.1, Exercise 6, page 329 (use mathematical induction)
+\end{problem}
+\begin{solution} 
+$\break$
+Basis: P(1) = $(1 + 1)! - 1 = 2 - 1 = 1$, which makes P(1) true.
+\\
+\\Inductive Step:
+\\P(k) = (k + 1)! - 1
+\\Assume P(k) is true.
+\\P(k+1) = $(k + 1)! - 1 + (k+1)(k+1)!$
+\\$= (k + 1)! - 1 + (k + 1)(k + 1)!$ 
+\\$= (k + 2)(k + 1)! - 1 $
+\\$= (k + 2)! - 1$ 
+\\$= [(k + 1) + 1]! - 1$
+\\Hence, true by mathematical induction.
+\end{solution}
+
+\begin{problem} 
+Section 5.1, Exercise 8, page 329 (use mathematical induction)
+\end{problem}
+\begin{solution} 
+$\break$
+Basis: P(0) = $2(-7)^0=2$ \\ $(1-(-7)^1)/4=8/4=2$, which makes P(0) true
+\\
+\\Inductive Step:
+\\Assume P(k) is true
+\\P(k+1) = $\frac{(1 - (-7)^{k+1})}{4}$
+\\
+\\ $\frac{(1 - (-7)^{k+1})}{4}$ + $2(-7)^{k+1}$ = $\frac{(1 - (-7)^{k+2})}{4}$
+\\$1 - (-7)^{k+1}$ + $8(-7)^{k+1}$ = $1 - (-7)^{k+2}$
+\\$(-7)^{k+1} - 8(-7)^{k+1} = (-7)^{k+2}$         multiplied both sides by -1
+\\$\frac{(-7)^{k+1} - 8(-7)^{k+1} = (-7)^{k+1}(-7)}{(- 7)^{k+1}}$
+\\$1 - 8$ = $-7$
+\\Hence, true by induction.
+\end{solution}
+
+\begin{problem} 
+Section 5.1, Exercise 10, page 330 (use mathematical induction)
+\end{problem}
+\begin{solution} 
+$\break$
+(a) $\frac{1}{1*2}$ = $\frac{1}{1} - \frac{1}{2}$ = $\frac{2}{2} - \frac{1}{2}$ = $\frac{1}{2}$
+\\$\frac{1}{1*2} + \frac{1}{2*3} +...+ \frac{1}{n*(n+1)}$ = $(\frac{1}{1} - \frac{1}{2}) + (\frac{1}{2} - \frac{1}{3})+...+(\frac{1}{n} - \frac{1}{n+1})$
+\\=$\frac{1}{1} - \frac{1}{n+1}$
+\\=$\frac{n+1-1}{n+1}$
+\\=$\frac{n}{n+1}$
+\\
+\\(b) Basis: P(1) = $\frac{1}{1*2}$ = $\frac{1}{2}$
+\\$\frac{1}{1+1} = \frac{1}{2}$ which makes P(1) true
+\\
+\\Inductive Step:
+\\P(k) = $\frac{1}{1*2} + \frac{1}{2*3} +...+ \frac{1}{k*(k+1)} = \frac{k}{(k+1)}$
+\\Assume P(k) is true.
+\\P(k+1) = $(\frac{1}{1*2} + \frac{1}{2*3} +...+ \frac{1}{k*(k+1)}) + \frac{1}{(k+1)(k+2)}$
+\\= $\frac{k}{(k+1)} + \frac{1}{(k+1)(k+2)}$
+\\= $\frac{1}{(k+1)}[k + \frac{1}{(k+2)}]$
+\\= $\frac{1}{(k+1)}[\frac{k^2 + 2k +1}{(k+2)}]$
+\\= $\frac{1}{(k+1)}*\frac{(k+1)^2}{(k+2)}$
+\\= $\frac{k+1}{k+2}$
+\\= $\frac{k+1}{(k+1)+1}$
+\\Hence, true by induction.
+\end{solution}
+
+\begin{problem} 
+Section 5.1, Exercise 14, page 330 (use mathematical induction)
+\end{problem}
+\begin{solution} 
+$\break$
+Basis: P(1) = $1*2^1 = (1-1)*2^{1+1} + 2 = 2$
+\\
+\\Inductive Step:
+\\P(k) = $(k-1)*2^{k+1} + 2$
+\\P(k+1) = $(k-1)*2^{k+1} + 2 + (k+1)*2^{k+1}$
+\\= $2^{k+1}[(k-1)+(k+1)]+2$
+\\= $2^{k+1}[2k] + 2$
+\\= $2^{k+2}*k + 2$
+\\= $k*2^{k+2} + 2$
+\\Hence, true by induction.
+\end{solution}
+
+\begin{problem} 
+Section 5.1, Exercise 24, page 330 (use mathematical induction)
+\end{problem}
+\begin{solution} 
+$\break$
+Basis: P(1): $\frac{2 - 1}{2} \ge \frac{1}{2}$ which holds
+\\
+\\Inductive Step:
+\\P(k): $\frac{1}{2k} \le \frac{1*3*5*...*2k-1}{2*4*6*...*2k}$
+\\P(k+1): $\frac{1}{2(k+1)} \le \frac{1}{2k}*\frac{2(k+1)-1}{2(k+1)}$
+\\ $\frac{1}{2k+2} \le \frac{2k+1}{2k(2k+2)}$
+\\
+\\ $\frac{1}{2(k+1)} = \frac{1}{2k} * \frac{2k}{(2k+2)}$
+\\ $\le [\frac{1*3*5*...*2k-1}{2*4*6*...*2k}] * \frac{2k}{2k+2}$ ... (by assumption) 
+\\ $\le [\frac{1*3*5*...*2k-1}{2*4*6*...*2k}] * \frac{2k+1}{2k+2}$
+\\ $\le [\frac{1*3*5*...*(2k-1)*(2k+1)}{2*4*6*...*2k*(2k+2)}]$ 
+\\ $\le [\frac{1*3*5*...*(2(k+1)-1)}{2*4*6*...*2(k+1)}]$
+\\Hence, true by induction.
+\end{solution}
+
+\begin{problem} 
+Section 5.1, Exercise 32, page 330 (use mathematical induction)
+\end{problem}
+\begin{solution} 
+$\break$
+Basis: P(1) = $1^3 + 2*1 = 3$ which holds true, since it is divisible by 3
+\\
+\\Inductive Step: 
+\\P(k) =$ k^3 + 2k$
+\\P(k+1) = $(k+1)^3 + 2(k+1)$
+\\= $k^3 + 1^3 + 3k^2 + 3k + 2k + 2$
+\\= $k^3 + 2k + 3k^2 + 3k + 3$
+\\= $(k^3 + 2k) + 3(k^2 + k + 1)$ which is divisible by 3
+\\Hence, true by induction.
+\end{solution}
+
+\begin{problem} 
+Section 5.2, Exercise 12, page 342
+\end{problem}
+\begin{solution} 
+$\break$
+Basis: $1=2^0$ represents numbers in binary form.\\
+By the inductive hypothesis, assume that every positive integer up to k can be represented as a sum of powers of 2.  If k + 1 is odd, then k is even. If k + 1 is even, then $(k + 1)/2$ is a positive integer, and can be written as a sum of distinct powers of two. After increasing every exponent by 1, it doubles the value and provides the sum for k+1.
+\end{solution}
+
+\begin{problem} 
+Section 5.2, Exercise 30, page 344
+\end{problem}
+\begin{solution} 
+$\break$
+The flaw is that the inductive step requires that both $a^k = 1$
+\\and $a^{k-1}$ = 1.  The base case has to be sufficient
+\\to support the inductive hypothesis in the first step. Here it isn’t, 
+\\as there are multiple values for which the statement is not supported. The statement breaks at k=1.
+\end{solution}
+
+\noindent
+Before attempting the problems from Chapter 5, make sure that you have carefully
+read Chapter 5.
+
+\bigskip
+
+\goodbreak
+\checklist
+\end{document}

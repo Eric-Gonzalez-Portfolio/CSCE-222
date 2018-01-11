@@ -1,0 +1,217 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm,latexsym,paralist}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{resources}{Resources}
+
+\newcommand{\name}[1]{\noindent\textbf{Name: #1}}
+\newcommand{\honor}{\noindent On my honor, as an Aggie, I have neither
+  given nor received any unauthorized aid on any portion of the
+  academic work included in this assignment. Furthermore, I have
+  disclosed all resources (people, books, web sites, etc.) that have
+  been used to prepare this homework. \\[2ex]
+ \textbf{Signature:} \underline{\hspace*{7cm}} }
+
+ 
+\newcommand{\checklist}{\noindent\textbf{Checklist:}
+\begin{compactitem}[$\Box$] 
+\item Did you add your name? 
+\item Did you disclose all resources that you have used? \\
+(This includes all people, books, websites, etc. that you have consulted)
+\item Did you sign that you followed the Aggie honor code? 
+\item Did you solve all problems? 
+\item Did you submit (a) your latex source file and (b) the resulting pdf file
+  of your homework on csnet?
+\item Did you submit (c) a signed hardcopy of the pdf file in class? 
+\end{compactitem}
+}
+
+\newcommand{\problemset}[1]{\begin{center}\textbf{Problem Set #1}\end{center}}
+\newcommand{\duedate}[2]{\begin{quote}\textbf{Due dates:} Electronic
+    submission of hw8.tex and hw8.pdf files of this homework is due on
+    \textbf{#1} on csnet.cs.tamu.edu.  Please do not archive or
+    compress the files.  A signed paper copy of the pdf file is due on
+    \textbf{#2} at the beginning of class.\end{quote} }
+
+
+\begin{document}
+\vspace*{-15mm}
+\begin{center}
+{\large
+CSCE 222-501 Discrete Structures for Computing\\[.5ex]
+Fall 2014 -- Hyunyoung Lee\\}
+\end{center}
+\problemset{8}
+\duedate{11/17/2014 before 23:59}{11/18/2014}
+
+\name{ Eric E. Gonzalez}
+\begin{resources}  Discrete Mathematics and its Applications 7th Ed.(Rosen)
+\end{resources}
+\honor
+
+\bigskip
+
+\noindent
+In this problem set, you will earn total $100+20$ (extra credit) points.
+
+\begin{problem} (10 points)
+Section 8.1, Exercise 2, page 510
+[Hint: Let $P_n$ denote the number of permutations of a set with $n$ elements.
+The initial condition is $P_0 = 1$.] 
+\end{problem}
+\begin{solution} 
+$\break$
+a) Let pn be the number of permutations of a set with n elements. We
+can make a recurrence relation choosing a location for the first element, then permuting the remaining n - 1 elements. Thus, p(n) = np(n - 1).
+\\b) p(1) = 1
+\\p(2) = 2
+\\p(3) = 6
+\\Iterating, we see p(n) = n(n - 1)(n - 2)$\ldots$(2)p(1)
+\\ so p(n) = n!
+\end{solution}
+
+\begin{problem} (10 points)
+Section 8.1, Exercise 12, page 511
+[Hint: Let $S_n$ denote the number of ways to climb $n$ stairs.
+One of the initial conditions is $S_0 = 1$.] 
+\end{problem}
+\begin{solution} 
+$\break$
+a) $a_n = a_{n-1} + a_{n-2} + a_{n-3}$ for $n \ge 3$
+\\b) $a_0 = 1; a_1 = 1; a_2 = 2$
+\\c) The number of ways one can climb the 8 flights of stairs: $a_8$
+\\Sequence: $a_3 = 4; a_4 = 7; a_5 = 13; a_6 = 24; a_7 = 44; a_8 = 81$
+\end{solution}
+
+\begin{problem} (10 points)
+Section 8.1, Exercise 20, page 511
+\end{problem}
+\begin{solution} 
+$\break$
+a) Recurrence Relation: $a_{5n}=a_{5(n-1)}+a_{5(n-2)} for n \ge 2$
+\\Initial Conditions: $a_0=1; a_5=1$
+\\b) Number of different ways driver can pay toll: $a_45$
+\\Sequence: $a_{10}=2$; $a_{15}=3$; $a_{20}=5$; $a_{25}=8$; $a_{30}=13$; $a_{35}=21$; $a_{40}=34$; $a_{45}=55$
+\end{solution}
+
+\begin{problem} (10 points)
+Section 8.1, Exercise 28, page 512. This problem has two parts as below. 
+\end{problem}
+\begin{solution} 
+\ \\
+a) (4 points) Show that the Fibonacci numbers satisfy $\ldots$
+\ \\For $n \ge 5$,
+\\$fn = f_{n-1} + f_{n-2}$
+\\$= (f_{n-2} + f_{n-3}) + (f_{n-3} + f_{n-4})$
+\\$= f_{n-3} + f_{n-4} + 2f_{n-3} + f_{n-4}$
+\\$= 3f_{n-3} + 2f_{n-4}$
+\\$= 3f_{n-4} + 3f_{n-5} + 2f_{n-4}$
+\\$= 5f_{n-4} + 3f_{n-5}$
+
+b) (6 points) Use this recurrence relation to show that $\ldots$ (prove by induction
+on $n$)
+\ \\Since $f_5 = f_3 + f_4 = 5$, P(1) is true. Assume that P(n) is true. $f_{5n} = 5k$ for some integer k.
+\\Then, $f_{5(n+1)} = f_{5n+5}$
+\\$= 5f_{5(n+1)−4} + 3f_{5(n+1)−5}$
+\\$= 5f_{5n+1} + 3f_{5n}$
+\\$= 5f_{5n+1} + 15k$
+\\$= 5(f_{5n+1} + 3k)$
+which is divisible by 5. Therefore, P (N+1) is true.
+\end{solution}
+
+\begin{problem} (15 points)
+Section 8.1, Exercise 32 a), b), c) and d), page 512
+\end{problem}
+\begin{solution} 
+$\break$
+a) The number of moves needed to move n disks from peg 1 to peg 3 is $a_n$. With just one disk, one must move it to peg 2, then peg 3. Thus, $a_1 = 2$. With n+1 disks, one must move n disks from peg 1 to peg 3, then move the largest disk to peg 2, and then move the n disks from peg 3 back to peg 1 so that one may move the largest disk to peg 3. Then, one may finally move the n disks back to peg 3, giving a recurrence relation of $a_n = 3a_{n-1} + 2$
+\\b) Assume $a_n=3^n-1.$
+\\Base step: $a_1=2=3^1-1$
+\\Inductive step: $a_{n+1}=3a_n+2=3(3^n-1)+2=3^{n+1}-1$
+\\Thus, the claim is proven by induction.
+\\c) By the product rule, there are $3^n$ different methods of disc placement.
+\\d) According to part (b), there are $3^n$ different arrangements.
+\end{solution}
+
+\begin{problem} (10 points)
+Section 8.2, Exercise 4 c), d), e) and f), page 524
+\end{problem}
+\begin{solution} 
+$\break$
+c) Characteristic equation: $r^2-6r+8=0$
+\\Solution: $\alpha_n = 3(2^n)+1(4^n)$
+\\d) Characteristic equation: $r^2-2r+1=0$
+\\Solution: $\alpha_n = 4-3n$
+\\e) Characteristic equation: $r^2-0r-1=0$
+\\Solution: $\alpha_n = 2(1^n)+3(-1)^n$
+\\f) Characteristic equation: $r^2+4r-5=0$
+\\Solution: $\alpha_n = 3(-3^n)-2n(-3)^n$
+\end{solution}
+
+\begin{problem} (10 points)
+Section 8.2, Exercise 8, page 524--525
+\end{problem}
+\begin{solution} 
+$\break$
+a) $L_n$ is the number of lobsters caught in year $n$ for the model of $L_n = (1/2)L_{n-1} + (1/2)L_{n-2} $ 
+\\b) Characteristic equation: $r^2 - (1/2)r - (1/2) = 0= (1/2)(2r+1)(r-1)$
+\\Roots: $r_1= -(1/2)$ and $r_2 = 1$
+\\Solution: $r_1= -(1/2)$ and $r_2 = 1$, so $a_n = k_1 (-1/2)^n + k_2$.
+\\Thus, $(-1/2)k_1 + k_2 = 100000$, and $(1/4)k_1 + k_2 = 300000.$ 
+\\Solving for system of equations gives $k_1= 800000/3$, $k_2 = 700000/3$.
+\\Therefore, $a_n = (800000/3)(-1/2)^n + (700000/3).$
+\end{solution}
+
+\begin{problem} (10 points)
+Section 8.4, Exercise 6 a), b), c) and d), page 549
+\end{problem}
+\begin{solution} 
+$\break$
+a) Generating function of $(-1)_n$ is $1/(x-1)$.
+\\b) Generating function of $(2^n)_{n \ge 1}, a_0=1$ is $2x/(1-2x).$
+\\c) Generating function of $(n-1)_n$ is $-1+x^2/(1-x)^2.$
+\\d) Generating function of $(1/(n+1)!)_n$ is $(e^x-1)/x.$
+\end{solution}
+
+\begin{problem} (15 points)
+Section 8.4, Exercise 8 a), b) and c), page 549
+\end{problem}
+\begin{solution} 
+$\break$
+a) $x^6+3x^4+3x^2+1$
+\\$(a_0,a_1,a_2,a_3,a_4,a_5,a_6,a_7,...)=(1,0,3,0,3,0,1,0,...)$
+\\$a_n=0$ for all $n \ge 7$
+\\b) $(3x-1)^3=27x^3-27x^2+9x-1$
+\\$(a_0,a_1,a_2,a_3,a_4,...)=(-1,9,-27,27,0,...)$
+\\$a_n=0$ for all $n \ge 4$
+\\c) Sequence for generating function of $1/(1-2x^2)$:
+\\$a_{2n}=2^n$
+\\$a_{2n+1}=0$ for all $n \ge 0$
+\end{solution}
+
+\begin{problem} (Extra credits: 5 points)
+Section 8.4, Exercise 6 e) and f), page 549
+\end{problem}
+\begin{solution} 
+$\break$
+e) $a_n=(^n_2)$
+\\Generating function: $x^2/(1-x)^3$
+\\f) $a_n=(^{10}_{n+1})$
+\\Generating function: $(-1+(1+x)^{10})/x$
+\end{solution}
+
+\begin{problem} (Extra credits: 15 points)
+Section 8.4, Exercise 8  d), e) and f), page 549
+\end{problem}
+\begin{solution} 
+$\break$
+d) Sequence for generating function of $x^2/(1-x)^3$: $a_n=(^n_2)$
+\\e) Sequence for generating function of $4x+9x^2+27x^3+81x^4+...$: $a_0=0, a_1=4$, and $a_n=3^n$ for all $n \ge 2$
+\\f) Sequence for generating function of $(1+x^3)/(1+x)^3$: $a_0=1$ and $a_n=(-1)^n*3n$ for all $n \ge 1$
+\end{solution}
+
+\goodbreak
+\checklist
+\end{document}

@@ -1,0 +1,258 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm,latexsym,paralist}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{resources}{Resources}
+
+\newcommand{\name}[1]{\noindent\textbf{Name: #1}}
+\newcommand{\honor}{\noindent On my honor, as an Aggie, I have neither
+  given nor received any unauthorized aid on any portion of the
+  academic work included in this assignment. Furthermore, I have
+  disclosed all resources (people, books, web sites, etc.) that have
+  been used to prepare this homework. \\[1.5ex]
+ \textbf{Signature:} \underline{\hspace*{5cm}} }
+
+ 
+\newcommand{\checklist}{\noindent\textbf{Checklist:}
+\begin{compactitem}[$\Box$] 
+\item Did you add your name? 
+\item Did you disclose all resources that you have used? \\
+(This includes all people, books, websites, etc.\ that you have consulted)
+\item Did you sign that you followed the Aggie honor code? 
+\item Did you solve all problems? 
+\item Did you submit (a) your latex source file and (b) the resulting pdf file
+  of your homework on csnet?
+\item Did you submit (c) a signed hardcopy of the pdf file in class? 
+\end{compactitem}
+}
+
+\newcommand{\problemset}[1]{\begin{center}\textbf{Problem Set #1}\end{center}}
+\newcommand{\duedate}[2]{\begin{quote}\textbf{Due dates:} Electronic
+    submission of hw4.tex and hw4.pdf files of this homework is due on
+    \textbf{#1} on csnet.cs.tamu.edu.  Please do not archive or
+    compress the files.  A signed paper copy of the pdf file is due on
+    \textbf{#2} at the beginning of class.
+    \textbf{If you do not turn in a signed hardcopy, your work will not be graded.}\end{quote} }
+
+
+\begin{document}
+\vspace*{-15mm}
+\begin{center}
+{\large
+CSCE 222-501 Discrete Structures for Computing\\[.5ex]
+Fall 2014 -- Hyunyoung Lee\\}
+\end{center}
+\problemset{4}
+\duedate{10/13/2014 before 23:59}{10/14/2014}
+\name{ Eric E. Gonzalez}
+\begin{resources} (Discrete Mathematics and its Applications 7th Edition by Rosen)
+\end{resources}
+\honor
+
+\bigskip
+\bigskip
+
+\begin{problem} (5 points)
+Section 1.3, Exercise 10 (d), page 35
+\end{problem}
+\begin{solution}
+$\break$
+(D)\\
+P = [(p $\lor$ q) $\land$ (p $\rightarrow$ r) $\land$ (q $\rightarrow$ r)] $\rightarrow$ r
+\\
+\begin{displaymath}
+\begin{array}{|c|c|c|c|c|c|c|c|c|}
+p &  q & r & p \lor q & p \rightarrow r & q \rightarrow r & (p \lor q) \land (p \rightarrow r) & (p \lor q) \land (p \rightarrow r) \land (q \rightarrow r) & P\\
+\hline
+T & T & T & T & T & T & T & T & T\\
+T & T & F & T & F & F & F & F & T\\
+T & F & T & T & T & T & T & T & T\\
+T & F & F & T & F & T & F & F & T\\
+F & T & T & T & T & T & T & T & T\\
+F & T & F & T & T & F & T & F & T\\
+F & F & T & F & T & T & F & F & T\\
+F & F & F & F & T & T & F & F & T\\
+\end{array}
+\end{displaymath}
+\end{solution}
+
+\begin{problem} (15 points)
+Section 1.3, Exercise 50, page 36 (you find the definition of functionally
+complete on page 35). 
+\end{problem}
+\begin{solution}
+$\break$
+(A)\\
+\begin{displaymath}
+\begin{array}{|c|c|c|c|}
+p &  p &\downarrow p & p \neg q \\
+\hline
+T & T & F & F\\
+T & F & F & F\\
+F & T & F & F\\
+F & F & T & T\\
+\end{array}
+\end{displaymath}
+\\ (B)
+\begin{displaymath}
+\begin{array}{|c|c|c|c|c|}
+p &  q & p \downarrow q & (p \downarrow q) \downarrow (p \downarrow q) & (p \lor q) \\
+\hline
+T & T & F & T & T \\
+T & F & F & T & T \\
+F & T & F & T & T \\
+F & F & T & F & F \\
+\end{array}
+\end{displaymath}
+\\ (C) Therefore, $\{ \downarrow \}$ is a complete list of logical operators.
+\end{solution}
+
+\begin{problem} (10 points)
+Section 1.4, Exercise 32, page 55
+\end{problem}
+\begin{solution}
+$\break$
+(a) All dogs have fleas. 
+\\$\forall$x(dog(x) $\to$ fleas(x))
+\\
+\\Negation: $\forall$x(dog(x) $\to$ fleas(x)) $\equiv$ $\exists$x(dog(x) $\land$ fleas(x))
+\\There is a dog that does not have fleas.
+\\
+\\(b) There is a horse that can add.
+\\$\exists$x(horse(x) $\land$ add(x))
+\\
+\\Negation: $\neg\exists$x(horse(x) $\land$ add(x)) $\equiv$ $\forall$x(horse(x) $\to$ $\neg$add(x))
+\\ No horse can add.
+\\
+\\(c) Every koala can climb.
+\\$\exists$x(koala(x) $\to$ climb(x))
+\\
+\\Negation: $\forall$x(koala(x) $\to$ climb(x)) $\equiv$ $\exists$x (koala(x) $\land$ $\neg$climb(x))
+\\There is a koala that cannot climb.
+\\
+\\d) No monkey can speak French. 
+\\$\forall$x(monkey(x) $\to$ $\neg$speakFrench(x))
+\\
+\\Negation: $\neg \forall$x $\neg$(monkey(x) $\to$ $\neg$speakFrench(x)) $\equiv$ $\exists$x (monkey(x) $\land$
+speakFrench(x))
+\\There is a monkey that can speak French.
+\\
+\\e) There exists a pig that can swim and catch fish.
+\\$\exists$x (pig(x) $\land$ swim(x) $\land$ catchFish(x))
+\\
+\\Negation: $\neg\exists$x(pig(x) $\land$ swim(x) $\land$ catchFish(x)) $\equiv$ 
+\\ $\forall$x$\neg$(pig(x) $\land$ swim(x) $\land$ catchFish(x)) $\equiv$ 
+\\ $\forall$x(pig(x) $\to$ $\neg$(swim(x) $\land$ catchFish(x)))
+\\There is no pig that can swim and catch fish.
+\\
+\end{solution}
+
+\begin{problem} (10 points)
+Section 1.5, Exercise 6, pages 64--65
+\end{problem}
+\begin{solution}
+$\break$
+(A) Randy Goldberg is enrolled in CS 252.
+\\(B) A student is enrolled in Math 695.
+\\(C) Carol Sitea is enrolled in a class.
+\\(D) A student is enrolled in Math 222 and CS 252.
+\\(E) If a student is enrolled in a certain class, then another student is enrolled in that same class.
+\\(F) If and only if a student is enrolled in a certain class, then another student is enrolled in that same class.
+\end{solution}
+
+\begin{problem} (10 points)
+Section 1.6, Exercise 4, page 78
+\end{problem}
+\begin{solution}
+$\break$
+(A) Simplification
+\\(B) Disjunctive syllogism
+\\(C) Modus ponens
+\\(D) Addition
+\\(E) Hypothetical syllogism
+\end{solution}
+
+\begin{problem} (10 points)
+Section 1.6, Exercise 8, page 78
+\end{problem}
+\begin{solution}
+$\break$
+Universal instantiation and Modus tollens.
+\end{solution}
+
+\begin{problem} (10 points)
+Section 1.6, Exercise 14 (c) and (d), page 79
+\end{problem}
+\begin{solution}
+$\break$
+(C) Step 1: Universal instantiation
+\\Step 2: Modus ponens
+\\Step 3: Universal instantiation
+\\Step 4: Modus ponens
+\\
+\\(D) Step 1: Existential instantiation
+\\Step 2: Simplification
+\\Step 3: Universal instantiation
+\\Step 4: Modus ponens
+\\Step 5: Simplification
+\\Step 6: Conjunction
+\\Step 7: Existential generalization
+\end{solution}
+
+\begin{problem} (10 points)
+Section 1.7, Exercise 18, page 91
+\end{problem}
+\begin{solution}
+$\break$
+(A) Assume that n is odd. $3n + 2$ = $3(2k+1)$ + 2. 
+\\= $6k + 3 + 2$
+\\=$6k + 5$
+\\=$6(k+4) + 1$
+\\=2(3k+2) + 1
+\\Which is odd.
+\\Therefore, if $n$ is an integer, and $3n + 2$ is even, then $n$ is also even.
+\\(B) Seeking a proof by contradiction, assume that $3n + 2$ is even and $n$ is odd. Since $n$ is odd, $3n + 2$ is also odd since the product of two odd numbers is odd and remains odd when added by two. Therefore, the assumption is false. As such, if $n$ is an integer, and $3n + 2$ is even, then $n$ is also even.
+\end{solution}
+
+\begin{problem} (10 points)
+Let $n>1$ be an integer. \textsl{Prove by contradiction} that if $n$ is a perfect square, then
+$n+3$ cannot be a perfect square. 
+\end{problem}
+\begin{solution}
+$\break$
+If n is a perfect square, then there must exist some integer $k$ such that $n=k^2$. \\
+Seeking a contradiction, we assume that if n is a perfect square, n + 3 is also a perfect square.
+\\n = $k^2$
+\\n + 3 = $(k+1)^2$ = $k^2$ + 2k + 1
+\\2k + 1 = 3
+\\2k = 2
+\\k = 1
+\\n = $k^2$ = $(1)^2$ = 1
+\\Since n = 1, n + 3 is not a perfect square because n $>$ 1 is needed for a perfect square. Statement holds by contradiction.
+\end{solution}
+
+\begin{problem} (10 points)
+Prove by induction that
+$$\sum_{i=0}^n 3^i = \frac{3^{n+1}-1}{2}$$
+holds for every non-negative integer $n$.
+\end{problem}
+\begin{solution}
+$\break$
+Let $n$ = $k+1$
+\\Induction Basis: We assume that 
+$$\sum_{i=0}^{k+1} 3^0 = \frac{3^{0+1}-1}{2}$$
+simplifies to $1=1$
+\\
+\\
+Induction Step: Assume that 
+$$\sum_{i=0}^{k+1} 3^i = \frac{3^{(k+1)+1}-1}{2}$$ which simplifies to: $$ \frac{3^{k+2}-1}{2} = \frac{3^{k+2}-1}{2}$$
+As such, 1 = 1.
+\\The statement holds for all non-negative integers $n$.
+\end{solution}
+
+
+\goodbreak
+\checklist
+\end{document}

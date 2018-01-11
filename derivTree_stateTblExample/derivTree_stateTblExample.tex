@@ -1,0 +1,42 @@
+\documentclass[12pt]{article}
+\input xypic
+
+
+\begin{document}
+\begin{center}
+\textbf{How to draw a derivation tree and a state table in LaTex}
+\end{center}
+
+\thispagestyle{empty}
+
+\noindent
+1. For example, with the grammar in Exercise 24, Section 13.1 (page 857), the derivation tree for  \textsl{abbccb} is given by
+$$
+\xymatrix{
+&& S \ar[dll] \ar[dl] \ar[d] \\ 
+a & b & S \ar[dll] \ar[dl] \ar[d] \\ 
+b & c & S \ar[dl] \ar[d] \\ 
+& c & b 
+}
+$$
+
+
+\bigskip
+
+
+\noindent
+2. For example, the state table given in Exercise 1 a) in Section 13.2 (page 863) can be given by
+$$
+\begin{tabular}{c|cc|cc|}  % the table has five columns
+& \multicolumn{2}{c|}{f} & \multicolumn{2}{c|}{g} \\  % f is over the second and third columns and g over the fourth and fifth columns
+\cline{2-5}   % put a line over the columns from the second to the fifth
+& \multicolumn{2}{c|}{Input} & \multicolumn{2}{c|}{Input} \\
+State & 0 & 1 & 0 & 1 \\
+\hline
+$s_0$ & $s_1$ & $s_0$ & 0 & 1 \\
+$s_1$ & $s_0$ & $s_2$ & 0 & 1 \\
+$s_2$ & $s_1$ & $s_1$ & 0 & 0
+\end{tabular}
+$$
+
+\end{document}

@@ -1,0 +1,246 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm,latexsym,paralist}
+\input xypic
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{resources}{Resources}
+
+\newcommand{\name}[1]{\noindent\textbf{Name: #1}}
+\newcommand{\honor}{\noindent On my honor, as an Aggie, I have neither
+  given nor received any unauthorized aid on any portion of the
+  academic work included in this assignment. Furthermore, I have
+  disclosed all resources (people, books, web sites, etc.) that have
+  been used to prepare this homework. \\[2ex]
+ \textbf{Signature:} \underline{\hspace*{7cm}} }
+
+ 
+\newcommand{\checklist}{\noindent\textbf{Checklist:}
+\begin{compactitem}[$\Box$] 
+\item Did you add your name? 
+\item Did you disclose all resources that you have used? \\
+(This includes all people, books, websites, etc. that you have consulted)
+\item Did you sign that you followed the Aggie honor code? 
+\item Did you solve all problems? 
+\item Did you submit (a) your latex source file and (b) the resulting pdf file
+  of your homework on csnet?
+\item Did you submit (c) a signed hardcopy of the pdf file in class? 
+\end{compactitem}
+}
+
+\newcommand{\problemset}[1]{\begin{center}\textbf{Problem Set #1}\end{center}}
+\newcommand{\duedate}[2]{\begin{quote}\textbf{Due dates:} Electronic
+    submission of hw9.tex and hw9.pdf files of this homework is due on
+    \textbf{#1} on csnet.cs.tamu.edu. A signed paper copy of the pdf file is due on
+    \textbf{#2} at the beginning of class.\end{quote} }
+
+
+\begin{document}
+\vspace*{-15mm}
+\begin{center}
+{\large
+CSCE 222-501 Discrete Structures for Computing\\[.5ex]
+Fall 2014 -- Hyunyoung Lee\\}
+\end{center}
+\problemset{9}
+\duedate{Monday 11/24/2014 before 23:59}{Tuesday 11/25/2014}
+
+\name{Eric E. Gonzalez}
+\begin{resources} Discrete Mathematics and its Applications 7th Ed.(Rosen)
+\end{resources}
+\honor
+
+\bigskip
+
+\noindent
+In this problem set, you will earn total $100+15$ (extra credit) points. Each question
+is worth 10 points unless otherwise noted.
+
+\begin{problem} 
+Chapter 9.1, Exercise 4, page 581
+\end{problem}
+\begin{solution} 
+$\break$
+a) Antisymmetric, transitive
+\\b) Reflexive, symmetric, transitive
+\\c) Reflexive, symmetric, transitive
+\\d) Reflexive, symmetric
+\end{solution}
+
+\begin{problem} (15 points)
+Chapter 9.1, Exercise 6, page 581
+\end{problem}
+\begin{solution} 
+$\break$
+a) $(1,1)\notin R.$ \qquad Not reflexive
+\\If $x+y=0$, then $y+x=0$. \qquad Symmetric
+\\$(1,-1)\in R$ and $(-1,1)\in R$. $1\not=-1.$ \qquad Not anti-symmetric
+\\$(2,-2)\in R$ and $(-2,2)\in R$. $(2,2)\notin R.$ \qquad Not transitive
+\\ \\b) $x=x$ for all real numbers. \qquad Reflexive
+\\$x= \pm y$ and $y=\pm x$. \qquad Symmetric
+\\$(1,-1)\in R$ and $(-1,1)\in R$. $1\not=-1.$ \qquad Not anti-symmetric
+\\If $x= \pm y$ and  $y=\pm  z$, $x=\pm z.$  \qquad Transitive
+\\ \\c) $x-x=0$ is rational.  \qquad Reflexive
+\\$x-y$ and $y-x$ are both rational. \qquad Symmetric
+\\$(2,3)\in R$ and $(3,2)\in R$. $2\not=3.$ \qquad Not anti-symmetric
+\\$x-y$ is rational and $y-z$ is rational, therefore $x-z$ is rational. \qquad Transitive
+\\ \\d) $(1,1)\notin R.$ \qquad Not reflexive
+\\$(1,2) \in R$, $(2,1) \notin R$. \qquad Not symmetric
+\\$x=0=y$.\qquad Anti-symmetric.
+\\$(8,4) \in R$ and $(4,2)\in R$, however $(2,4)\notin R$.\qquad Not transitive
+\\ \\e) $x^2 \ge 0$ for all real numbers. \qquad Reflexive
+\\$xy = yx$. \qquad Symmetric
+\\$(4,2)\in R$ and $(2,4)\in R$. $2\not=4.$ \qquad Not anti-symmetric
+\\$(-2,0) \in R$ and  $(0,4)\in R$, however $(-2,4)\notin R$. \qquad Not transitive
+\\ \\f) $(1,1)\notin R.$ \qquad Not reflexive
+\\$xy=yx$. \qquad Symmetric
+\\$(1,0)\in R$ and $(0,1)\in R$. $1\not=0.$ \qquad Not anti-symmetric
+\\$(1,0) \in R$ and $(0,4)\in R$, however $(1,4) \notin R.$ \qquad Not transitive
+\\ \\g) $(2,2)\notin R.$ \qquad Not reflexive
+\\$(1,2) \in R$, $(2,1) \notin R$. \qquad Not symmetric
+\\$x=y$.\qquad Anti-symmetric.
+\\This function is not reflexive, symmetric, or transitive for any value of $x$ other than $1$.
+\\ \\h) $(2,2)\notin R$ \qquad Not reflexive
+\\$(y,x) \in R$ for any $(x,y)$ because either $x=1$ or $y=1$. \qquad Symmetric
+\\$(1,2)\in R$ and $(2,1)\in R$. $1\not=2.$ \qquad Not anti-symmetric
+\\$(2,1)\in R$ and $(1,2)\in R$, however $(2,2) \notin R$. \qquad Not transitive
+\end{solution}
+
+\begin{problem} 
+Chapter 9.1, Exercise 42, page 583
+\end{problem}
+\begin{solution} 
+$\break$
+$R_{1}=\emptyset $
+\\$R_{2}=\{(0,0)\}$\
+\\$R_{3}=\{(0,1)\}$
+\\$R_{4}=\{(1,0)\}$
+\\$R_{5}=\{(1,1)\}$
+\\$R_{6}=\{(0,0),(0,1)\}$
+\\$R_{7}=\{(0,0),(1,0)\}$
+\\$R_8=\{(0,0),(1,1)\}$
+\\$R_9=\{(0,1),(1,0)\}$
+\\$R_{10}=\{(0,1),(1,1)\}$
+\\$R_{11}=\{(1,0),(1,1)\}$
+\\$R_{12}=\{(0,0),(0,1),(1,0)\}$
+\\$R_{13}=\{(0,0),(0,1),(1,1)\}$
+\\$R_{14}=\{(0,0),(1,0),(1,1)\}$
+\\$R_{15}=\{(0,1),(1,0),(1,1)\}$
+\\$R_{16}=\{(0,0),(0,1),(1,0),(1,1)\}$
+\end{solution}
+
+\begin{problem} (20 points)
+Chapter 9.1, Exercise 44, page 583
+\end{problem}
+\begin{solution} 
+$\break$
+a)Reflexive: $R_8,R_{13},R_{14},R_{16}$
+\\b)Irreflexive: $R_1,R_3,R_9,R_4$
+\\c)Symmetric: $R_1,R_2,R_5,R_8,R_9,R_{12},R_{15},R_{16}$
+\\d)Anti-Symmetric: $R_1,R_2,R_3,R_4,R_5,R_6,R_7,R_8,R_{10},R_{11},R_{13},R_{14}$
+\\e)Asymmetric: $R_3,R_4$
+\\f)Transitive: $R_1,R_2,R_3,R_4,R_5,R_6,R_7,R_8,R_{10},R_{11},R_{13},R_{14},R_{16}$
+\end{solution}
+
+\begin{problem} 
+Chapter 9.5, Exercise 2, page 615
+\end{problem}
+\begin{solution} 
+$\break$
+a) Equivalence relation
+\\b) Equivalence relation
+\\c) Not an equivalence relation: not transitive because though $a$ and $b$ may share a common parent and $b$ and $c$ may share a common parent, $a$ and $c$ do not necessarily share the same parent.
+\\d) Not an equivalence relation: Not transitive. Though $a$ and $b$ may have met, and $b$ and $c$ may have met, $a$ and $c$ may have not met.
+\\e) Not an equivalence relation: Not transitive. Though $a$ and $b$ may speak the same language, and $b$ and $c$ may speak the same language, $a$ and $c$ may not necessarily speak the same language.
+\end{solution}
+
+\begin{problem}
+Chapter 9.5, Exercise 16, page 615
+\end{problem}
+\begin{solution} 
+$\break$
+$ab=ba$. \qquad Reflexive
+\\$ad=bc$ is equivalent to $cb=da$.  \qquad Symmetric
+\\$ad=bc$ and $cf=de$ 
+\\$af=ad/df=ad*(f/d)=b/d*(cf)=b/d(de)=de.$ \qquad Transitive
+\\As such, $R$ is an equivalence relation.
+\end{solution}
+
+\begin{problem} 
+Chapter 9.5, Exercise 58, page 618
+\end{problem}
+\begin{solution} 
+$\break$
+a) The relation is reflexive because $B_1$ can be found by rotating $B_1$. Since $B_1$ can be obtained from $B_2$ by a composition of rotations, $(B_2,B_1)\in R$ for any $(B_1,B_2)\in R$. Thus, the relation is symmetric. From the composition of rotations, it is made clear that $R$ is transitive since $B_1,B_2$ and $B_3$ are in all in $R$.
+\\b) $\{(B_1,B_1,B_1),(B_2,B_2,B_2),(B_3,B_3,B_3),(B_1,B_1,B_2),(B_1,B_1,B_3),
+\\(B_2,B_2,B_1),(B_2,B_2,B_3),(B_3,B_3,B_1),(B_3,B_3,B_2)\}$
+\end{solution}
+
+\begin{problem} 
+Chapter 9.6, Exercise 4, page 630
+\end{problem}
+\begin{solution} 
+$\break$
+a) $(S,R)$ is not a poset: $R$ is not antisymmetric because there may be two different people with the same height.
+\\b) $(S,R)$ is not a poset: $R$ is not reflexive because it is not possible for a person to weigh more than themself.
+\\c) $(S,R)$ is a poset. $R$ is reflexive since $(a,a)\in R$ for all $a\in S$. For some $(a,b) \in S, a\not= b$, and $(a,b)\in R$, $a$ is a descendant of $b$ and, therefore, $b$ cannot be a descendant of $a$. As such, $(b,a)\notin R$ and $R$ is antisymmetric. Finally, $R$ is transitive since $(a,b)\in R$ and $(b,c)\in R$ implies $(a,c)\in R$.
+\\d) $(S,R)$ is not a poset: $R$ is not reflexive because a person has the same friends as themself.
+\end{solution}
+
+\begin{problem} 
+Chapter 9.6, Exercise 22, page 631
+\end{problem}
+\begin{solution} 
+$\break$
+a) The Hasse diagram of set \{1, 2, 3, 4, 5, 6\} with divisibility condition is given by\\
+$$
+\diagram
+4 & 6 \\
+2  \uline  \urline  & 3 \uline   \uline  & 5 \\
+&1 \urline \uline 
+\enddiagram
+$$
+\\
+b) The Hasse diagram of set \{3, 5, 7, 11, 13, 16, 17\} with divisibility condition is given by\\
+$$
+\diagram
+0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+3 & 5 & 7 & 11 & 13 & 16 & 17 \\
+\enddiagram
+$$
+\\
+c) The Hasse diagram of set \{2, 3, 5, 10, 11, 15, 25\} with divisibility condition is given by\\
+$$
+\diagram
+10 & 25 & 15 \\
+2\uline  & 5 \ulline \uline \urline  & 3 \uline  & 11\\
+\enddiagram
+$$
+\\
+d) The Hasse diagram of set \{1, 3, 9, 27, 81, 243\} with divisibility condition is given by\\
+$$
+\diagram
+243 \\
+81\uline\\
+27\uline\\
+9\uline\\
+3\uline\\
+1\uline\\
+\enddiagram
+$$
+\\
+\end{solution}
+
+\begin{problem}
+Chapter 9.6, Exercise 48, page 632
+\end{problem}
+\begin{solution} 
+$\break$
+$S$ is reflexive since $A_1 \prec A_2$ for all integers. If $A_1 \prec A_2$ and $A_2\prec A_1$, then $A_1=A_2$. So, $S$ is also antisymmetric. Finally, $S$ is transitive because $A_1 \prec A_2$ and $A_2 \prec A_3$ implies that $A_1\prec A_3$. Therefore, $(S, \prec)$ is a poset. Since $A_1 \in(A_1,C_1)$ and $A_2 \in(A_2,C_2)$, $A_1$ must be a maximal and $A_2$ must be a minimal since there exist no $A_1 \in S$ and $A_2 \in S$ such that $A_1<A_2$. As such, $S$ is a lattice.
+\end{solution}
+
+
+\goodbreak
+\checklist
+\end{document}
